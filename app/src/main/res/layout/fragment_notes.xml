@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.NotesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#047166"
+        android:popupTheme="@style/Theme.AppCompat"
+        android:subtitleTextColor="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+        android:titleTextColor="?attr/colorPrimary"
+        app:menu="@menu/menu_global" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="13"
+        tools:listitem="@layout/notes_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        android:contentDescription="@string/Add"
+        android:src="@android:drawable/ic_input_add"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/nothing_to_show_please_add_new_notes"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#848181"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+</FrameLayout>

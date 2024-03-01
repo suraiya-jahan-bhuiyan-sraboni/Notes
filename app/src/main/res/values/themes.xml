@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!--<style name="Base.Theme.Notes" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#037268</item>
+        <!--<item name="android:itemBackground">#673AB7</item>-->
+    </style>
+
+    <!-- Style for PopupMenu -->
+
+    <style name="Theme.Notes" parent="Base.Theme.Notes" />
+
+    <style name="ThemeOverlay.Notes.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
+</resources>
